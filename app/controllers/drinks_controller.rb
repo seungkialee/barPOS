@@ -1,6 +1,6 @@
 class DrinksController < ApplicationController
   def index
     @drinks = Drink.all
-    @order = current_session
+    @order_item = current_session.order_items.new
   end
 end

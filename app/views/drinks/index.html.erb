@@ -1,6 +1,14 @@
-<%=link_to "Orders", order_path(@order)%>
+<%#link_to "Orders", order_path(@order)%>
 
 
 <% @drinks.each do |drink|%>
-  <li><%= drink.name %>-<%=drink.price%></li>
+  <li>
+    <%= drink.name %>-<%=drink.price%>
+    <%= form_for @order_item do |form| %>
+      <%= form.hidden_field :drink_id, value: drink.id %>
+      <%= form.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+       <%= form.submit "Add to Bill", class: "btn btn-primary" %>
+    <% end %>
+    <br>
+  </li>
 <%end%>

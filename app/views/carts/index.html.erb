@@ -1,0 +1,7 @@
+<div class="shopping-cart">
+  <%= render "shopping_cart" %>
+  <%= button_to "Order", order_path(@order), method: 'ordered', class: 'btn btn-success' %>
+  <%# form_for order_path(@order), url:{action: "ordered"} do |form|%>
+  <%# form.submit "Order", class: "btn btn-success"%>
+  <%# end %>
+</div>
