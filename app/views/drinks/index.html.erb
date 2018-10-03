@@ -1,0 +1,6 @@
+<%=link_to "Orders", order_path(@order)%>
+
+
+<% @drinks.each do |drink|%>
+  <li><%= drink.name %>-<%=drink.price%></li>
+<%end%>

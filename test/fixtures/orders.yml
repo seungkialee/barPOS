@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subtotoal: 9.99
+  tax: 9.99
+  tip: 9.99
+  total: 9.99
+  order_status: one
+
+two:
+  subtotoal: 9.99
+  tax: 9.99
+  tip: 9.99
+  total: 9.99
+  order_status: two
