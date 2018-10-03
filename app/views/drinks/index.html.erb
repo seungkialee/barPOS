@@ -1,14 +1,17 @@
 <%#link_to "Orders", order_path(@order)%>
 
+<div class="wrapper">
+  <% @drinks.each do |drink|%>
+    <div class="wrapper-item">
+      <h2><%= drink.name %> $<%=drink.price%></h2>
 
-<% @drinks.each do |drink|%>
-  <li>
-    <%= drink.name %>-<%=drink.price%>
-    <%= form_for @order_item do |form| %>
-      <%= form.hidden_field :drink_id, value: drink.id %>
-      <%= form.number_field :quantity, value: 1, class: "form-control", min: 1 %>
-       <%= form.submit "Add to Bill", class: "btn btn-primary" %>
-    <% end %>
-    <br>
-  </li>
-<%end%>
+        <img class="item-img" src="<%=drink.img_url%>" alt="drink pic">
+        <%= form_for @order_item do |form| %>
+          <%= form.hidden_field :drink_id, value: drink.id %>
+          <%= form.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+           <%= form.submit "Add", class: "btn btn-primary" %>
+        <% end %>
+        </div>
+      <%end%>
+
+</div>

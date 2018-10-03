@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ShoppingCartExample</title>
+  <title>POS</title>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <% if request.ssl? %>
     <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
@@ -14,11 +14,18 @@
 
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="site">
   <div class="container">
     <div class="row">
       <div class="col-xs-6">
         <h1><%= link_to "Flatiron Pub", root_path %></h1>
+        <ul class="navbar">
+          <li><a href="" class="nav-links">Beer</a></li>
+          <li><a href="" class="nav-links">Liquor</a></li>
+          <li><a href="" class="nav-links">Wine</a></li>
+          <li><a href="" class="nav-links">Cocktails</a></li>
+        </ul>
+
       </div>
       <div class="col-xs-6 text-right">
         <h1 class="cart-text"><%= render 'layouts/cart_text' %></h1>

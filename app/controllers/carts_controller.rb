@@ -10,6 +10,7 @@ class CartsController < ApplicationController
     @order = current_session
     @cart_id = @order.id
     @order_items = current_session.order_items
+    # @order_item = OrderItem.find(params[:id])
   end
-  
+
 end

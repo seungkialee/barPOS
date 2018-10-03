@@ -6,14 +6,16 @@ class OrdersController < ApplicationController
   end
 
   def update
-    raise params.inspect
+    
   end
 
   def ordered
     @order = Order.find(params[:id])
     @order.order_status_id = 2
     @order.save
-    redirect_to "/submitted" 
+    session.delete(:order_id)
+    current_session
+    redirect_to "/submitted"
   end
 
 end
