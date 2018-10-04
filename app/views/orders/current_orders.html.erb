@@ -1,0 +1,17 @@
+<h1 class="bar-h1 text-center">Current Orders!</h1>
+
+
+<div class="current-order-wrapper">
+  <%@current_orders.each do |order|%>
+    <div class="order">
+      <h2>Order ID: <%= order.id %></h2>
+      <h2>Kiosk Number:<%= order.user_id %></h2>
+      <% order.order_items.each do |order_item|%>
+        <div class="wrapped">
+          <h3><%= order_item.drink.name%> - <%=order_item.quantity%></h3>
+        </div>
+      <%end%>
+      <%= link_to "Finished Order!", finished_path(order), method:'post', class: 'btn btn-success order-btn', action:"POST" %>
+    </div>
+  <%end%>
+</div>

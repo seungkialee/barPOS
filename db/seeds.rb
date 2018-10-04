@@ -11,6 +11,8 @@ OrderItem.destroy_all
 Order.destroy_all
 OrderStatus.destroy_all
 Drink.destroy_all
+User.destroy_all
+Login.destroy_all
 
 Drink.create! id: 1, category: "Beer", name: "Sapporo",  img_url: "https://medlineplus.gov/images/Alcohol.jpg", price: 4.00, active: true
 Drink.create! id: 2, category: "Beer", name: "Heineken",  img_url: "https://medlineplus.gov/images/Alcohol.jpg", price: 9.00, active: true
@@ -33,7 +35,13 @@ OrderStatus.create! id: 1, name: "Pending"
 OrderStatus.create! id: 2, name: "Ordered"
 OrderStatus.create! id: 3, name: "Done"
 
-# @new_order = Order.create(order_status_id: 1)
+User.create(id:1 ,username:"Kiosk1", password:"k1password")
+User.create(id:2 ,username:"Kiosk2", password:"k2password")
+User.create(id:3 ,username:"Kiosk3", password:"k3password")
+User.create(id:4, username:"Master", password:"masterpassword")
+
+#
+# Order.create(order_status_id: 1)
 
 # OrderItem.create(drink_id: 1, order_id: @new_order.id)
 # OrderItem.create(drink_id: 2, order_id: @new_order.id)

@@ -1,0 +1,47 @@
+.wrapper-bartender{
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.bar-btn{
+  padding:3rem;
+  font-size: 4rem;
+}
+
+.bar-h1{
+  color: #f4f4f4;
+  font-size: 6rem;
+  padding: 2rem;
+  background-color: #B22222;
+  border-radius: 5px;
+  margin-bottom:10rem;
+  margin-top: 5rem;
+  font-family: 'Lobster';
+}
+
+.current-order-wrapper{
+  width:85%;
+  margin: 0 auto;
+  padding:2rem;
+  background-color: #eee;
+  border-radius:15px;
+}
+
+.order{
+  border: 5px solid brown;
+  margin:1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.order-btn{
+  font-size:2rem;
+  padding:1.25rem;
+  width:30%;
+  display: block;
+  margin:0 auto;
+}

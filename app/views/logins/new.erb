@@ -1,0 +1,22 @@
+<h1 class="text-center">Log in</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:login, url: login_path) do |f| %>
+
+      <div class="">
+        <%= f.label :username%>
+        <%= f.text_field :username, class: 'form-control' %>
+      </div>
+
+      <div class="">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+
+
+      <%= f.submit "Log in", class: "btn btn-primary"%>
+
+    <%end%>
+
+  </div>
+</div>

@@ -16,8 +16,14 @@
 
 
 .site{
-  background-color: #666;
+  background-color: #eee;
   color:#000;
+}
+
+.cart_btn{
+  font-size:2rem;
+  text-decoration: none;
+  padding:1rem;
 }
 
 .navbar{
