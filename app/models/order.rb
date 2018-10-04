@@ -2,8 +2,10 @@ class Order < ApplicationRecord
   belongs_to :order_status, optional: true
   has_many :order_items
   has_many :drinks, through: :order_items
+  belongs_to :user
   before_create :set_order_status
   before_save :update_subtotal
+
 
 
   def subtotal
