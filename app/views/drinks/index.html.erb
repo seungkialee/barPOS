@@ -4,8 +4,9 @@
   <% @drinks.each do |drink|%>
     <div class="wrapper-item">
       <h2><%= drink.name %> $<%=drink.price%></h2>
-
+      <div class="">
         <img class="item-img" src="<%=drink.img_url%>" alt="drink pic">
+      </div>      
         <%= form_for @order_item do |form| %>
           <%= form.hidden_field :drink_id, value: drink.id %>
           <%= form.number_field :quantity, value: 1, class: "form-control", min: 1 %>

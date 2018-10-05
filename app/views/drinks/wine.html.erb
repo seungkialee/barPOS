@@ -3,7 +3,9 @@
     <div class="wrapper-item">
       <h2><%= wine.name %> $<%=wine.price%></h2>
 
-        <img class="item-img" src="<%=wine.img_url%>" alt="wine pic">
+      <div class="">
+        <img class="item-img" src="<%=wine.img_url%>" alt="drink pic">
+      </div>
         <%= form_for @order_item do |form| %>
           <%= form.hidden_field :drink_id, value: wine.id %>
           <%= form.number_field :quantity, value: 1, class: "form-control", min: 1 %>

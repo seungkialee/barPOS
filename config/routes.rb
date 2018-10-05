@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :order_statuses
 
 
-  resources :drinks, only: [:index, :new ]
+  resources :drinks, only: [:index, :new, :create]
   get'/drinks/beer', to: 'drinks#beer'
   get'/drinks/wine', to: 'drinks#wine'
   get'/drinks/liquor', to: 'drinks#liquor'

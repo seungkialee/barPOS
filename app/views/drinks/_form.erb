@@ -5,23 +5,23 @@
 </p>
 <p>
 <%= f.label :name %>
-<%= f.text_field :name %>
+<%= f.text_field :name , class: 'form-control' %>
 </p>
 <p>
 <%= f.label :price %>
-<%= f.text_field :price %>
+<%= f.text_field :price , class: 'form-control'%>
 </p>
 <p>
 <%= f.label :img_url %>
-<%= f.text_field :img_url %>
+<%= f.text_field :img_url , class: 'form-control'%>
 </p>
 <p>
 <%= f.label :active %>
-<%= f.select :active, ["True", "False"]  %>
+<%= f.select :active, ["True", "False"] , class: 'form-control' %>
 </p>
 <p>
 <%= f.label :info %>
-<%= f.text_field :info %>
+<%= f.text_field :info , class: 'form-control'%>
 </p>
 
 <%= f.submit "Add Item to Menu"%>
