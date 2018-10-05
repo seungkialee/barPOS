@@ -26,9 +26,10 @@ Drink.create! id: 7, category: "Wine", name: "ARMAND DE BRIGNAC BRUT GOLD CHAMPA
 Drink.create! id: 8, category: "Wine", name: "Chardonnay by Andy",  img_url: "http://www.menageatroiswines.com/sites/default/files/Chardonnay.png", price: 99.00, active: true
 Drink.create! id: 9, category: "Wine", name: "Cabernet by Jordan",  img_url: "https://www.totalwine.com/media/sys_master/twmmedia/hcd/h5f/10301736091678.png", price: 1.00, active: true
 
-Drink.create! id: 10, category: "Cocktail", name: "Pure Strawberry",  img_url: "https://2.bp.blogspot.com/-pkIs8VKylEU/WpnC7Wr1AUI/AAAAAAAAAvc/xWiBmPGu4TwXmmjE4-sO8JMx47j-6NwWQCEwYBhgL/s1600/IMG_1418%2B2.JPG", price: 4.00, active: true
+Drink.create! id: 10, category: "Cocktail", name: "Pure Strawberry",  img_url: "https://s3-media1.fl.yelpcdn.com/bphoto/QFGwN1T5tINssEeQ7P_3Lg/o.jpg", price: 12.00, active: true
 Drink.create! id: 11, category: "Cocktail", name: "Lychee Mango",  img_url: "https://4.bp.blogspot.com/-ks6pA5bYQDA/WpnC5dK0SLI/AAAAAAAAAvc/w3QprSuTdgMh0wzvMiL5rgsu9krHLw5dACEwYBhgL/s1600/IMG_1397.JPG", price: 9.00, active: true
 Drink.create! id: 12, category: "Cocktail", name: "Cutetini",  img_url: "https://4.bp.blogspot.com/-ks6pA5bYQDA/WpnC5dK0SLI/AAAAAAAAAvc/w3QprSuTdgMh0wzvMiL5rgsu9krHLw5dACEwYBhgL/s1600/IMG_1397.JPG", price: 7.00, active: true
+Drink.create! id: 13, category: "Cocktail", name: "Lemonie",  img_url: "https://s3-media1.fl.yelpcdn.com/bphoto/oaswQQH_gyZXUeaRfPWaXA/o.jpg", price: 9.00, active: true
 
 
 OrderStatus.create! id: 1, name: "Pending"
