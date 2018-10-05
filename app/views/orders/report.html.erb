@@ -1,0 +1,16 @@
+<div class="text">
+  <h1 class="bar-h1">Report</h1>
+  <h1 class="non">List of all sales</h1>
+
+  <ol>
+    <% @orders.each do |order| %>
+      <li class="order_subtotals"><span class="cash">$<%= order.subtotal %></span> at <%= order.created_at.asctime %></li>
+    <% end %>
+  </ol>
+
+
+  <h1>Total Revenue: <span class="cash">$<%= @total %></span></h1>
+
+</div>
+
+<%= link_to "Go Back","/bartender",class: "back-btn, btn, btn-primary"%>
