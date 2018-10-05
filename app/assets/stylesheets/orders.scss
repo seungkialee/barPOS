@@ -7,10 +7,58 @@
   grid-gap: 1rem;
 }
 
+.order_subtotals{
+  font-size: 2rem;
+  margin:1rem;
+}
+
+.non{
+  text-align: left;
+  margin-bottom:3rem;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.btn-primary:hover{
+  text-decoration: none;
+}
+
+.back-btn{
+  padding:1rem;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.move-down{
+  margin-bottom: 4rem;
+}
+
+.drink-info{
+  margin-left:10rem;
+  font-size:5rem;
+}
+
 .info_btn{
   width: 90%;
   padding: 1rem;
   margin: .75rem;
+}
+
+.drink{
+  font-size: 2rem;
 }
 
 .finished_order{

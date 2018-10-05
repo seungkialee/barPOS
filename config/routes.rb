@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :order_items
+  get '/orders/report', to: "orders#report"
   resources :orders
   resources :order_statuses
 
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
 
   post '/orders/:id', to: "orders#ordered"
   post '/orders/:id/finished', to: "orders#finished", as: "finished"
+  get '/orders/report', to: "orders#report"
   get '/submitted', to: "submitteds#index"
 
   get '/login', to: 'logins#new'
