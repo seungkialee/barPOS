@@ -14,7 +14,7 @@ class OrderItemsController < ApplicationController
       @order.save
       #flash[:message] = "Added to tab"
       session[:order_id] = @order.id
-      redirect_to drinks_path
+      redirect_back(fallback_location: drinks_path)
   end
 
   def update

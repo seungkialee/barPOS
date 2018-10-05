@@ -13,9 +13,11 @@ class OrdersController < ApplicationController
 
     render :layout => 'login'
   end
+
   def show
-    @order = current_session
-    @drinks = @order.drinks
+
+    @order = Order.find(params[:id])
+    render :layout => 'login'
   end
 
   def update
