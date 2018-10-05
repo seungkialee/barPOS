@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <% @wines.each do |wine|%>
+    <div class="wrapper-item">
+      <h2><%= wine.name %> $<%=wine.price%></h2>
+
+        <img class="item-img" src="<%=wine.img_url%>" alt="wine pic">
+        <%= form_for @order_item do |form| %>
+          <%= form.hidden_field :drink_id, value: wine.id %>
+          <%= form.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+           <%= form.submit "Add", class: "btn btn-primary" %>
+        <% end %>
+        </div>
+      <%end%>
+</div>

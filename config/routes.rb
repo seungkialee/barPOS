@@ -2,7 +2,13 @@ Rails.application.routes.draw do
   resources :order_items
   resources :orders
   resources :order_statuses
-  resources :drinks
+
+
+  resources :drinks, only: [:index, :new ]
+  get'/drinks/beer', to: 'drinks#beer'
+  get'/drinks/wine', to: 'drinks#wine'
+  get'/drinks/liquor', to: 'drinks#liquor'
+  get'/drinks/cocktail', to: 'drinks#cocktail'
   resources :carts, only: [:index]
 
   post '/orders/:id', to: "orders#ordered"
@@ -15,6 +21,7 @@ Rails.application.routes.draw do
 
   get'/bartender', to: 'users#index'
   get'/current_orders', to: 'orders#current_orders'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "logins#new"
