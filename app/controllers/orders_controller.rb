@@ -3,7 +3,14 @@ class OrdersController < ApplicationController
   skip_before_action :authorized?, only: [:show, :ordered]
 
   def index
+    @current_orders = Order.where(order_status_id: 2)
+    @never_placed_orders = Order.where(order_status_id: 1)
+    @finished_orders = Order.where(order_status_id: 3)
+    @first_order= Order.first
+    @last_order= Order.last
+
     @orders = Order.all
+
     render :layout => 'login'
   end
   def show

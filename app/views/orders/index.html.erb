@@ -1,3 +1,11 @@
-<%=@drinks.each do |drink_arr|%>
-  <li><%=order_arr%></li>
-<%end%>
+<h1 class="text-center bar-h1">Finished Orders!</h1>
+<h2 class="date_range">Date range: <%=@first_order.created_at.asctime%>  -  <%=@last_order.created_at.asctime%></h2>
+<div class="finished_orders">
+  <%@finished_orders.each do |finished_order|%>
+    <div class="finished_order">
+      <h3>Order ID:<%= finished_order.id %></h3>
+      <h3>Order Total:<span class="cash">$<%= finished_order.subtotal %></span></h3>
+      <%= link_to "Info", order_path(finished_order), class:"info_btn btn btn-primary"%>
+    </div>
+  <%end%>
+</div>
