@@ -14,9 +14,21 @@ class OrdersController < ApplicationController
     render :layout => 'login'
   end
 
+  def report
+    @orders = Order.all
+    total = 0
+    @orders.each do |order|
+      total += order.subtotal
+    end
+    @total = total
+
+    render :layout => 'login'
+  end
+
   def show
 
     @order = Order.find(params[:id])
+    @order_items = @order.order_items
     render :layout => 'login'
   end
 
@@ -44,6 +56,8 @@ class OrdersController < ApplicationController
     @order.save
     redirect_to "/current_orders"
   end
+
+
 
   private
   def authorized?

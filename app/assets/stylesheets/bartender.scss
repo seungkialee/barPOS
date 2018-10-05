@@ -6,7 +6,13 @@
   grid-auto-rows: minmax(100px, auto);
 }
 
-.bar-btn{
+.text{
+  text-align: center;
+  width:60%;
+  margin: 0 auto;
+}
+
+#bar-btn{
   padding:3rem;
   font-size: 4rem;
 }
